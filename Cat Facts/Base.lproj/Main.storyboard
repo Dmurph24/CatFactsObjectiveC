@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,96 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button below to load a new cat fact!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bba-P8-QfK">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QJ-vn-46K">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0039215686269999999" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="mMR-KV-BZ1"/>
+                                    <constraint firstAttribute="width" constant="80" id="nSn-7q-5aI"/>
+                                </constraints>
+                                <state key="normal" title="New Fact">
+                                    <color key="titleColor" red="0.97654172210000001" green="0.97654172210000001" blue="0.97654172210000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mMR-KV-BZ1"/>
+                                        <exclude reference="nSn-7q-5aI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="mMR-KV-BZ1"/>
+                                        <include reference="nSn-7q-5aI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pressedCatFactButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5N-94-w34"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bba-P8-QfK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="2eN-7A-C3r"/>
+                            <constraint firstItem="bba-P8-QfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4BP-T1-vnK"/>
+                            <constraint firstItem="6QJ-vn-46K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="80J-Ir-e0H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bba-P8-QfK" secondAttribute="trailing" constant="20" id="CCD-tx-O3c"/>
+                            <constraint firstItem="bba-P8-QfK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="159.5" id="VU0-vK-o2r">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="bba-P8-QfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="bVh-IE-GAI"/>
+                            <constraint firstItem="6QJ-vn-46K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ueZ-Mg-70p"/>
+                            <constraint firstItem="bba-P8-QfK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yeT-J4-VE6">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bba-P8-QfK"/>
+                                <exclude reference="6QJ-vn-46K"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2eN-7A-C3r"/>
+                                <exclude reference="4BP-T1-vnK"/>
+                                <exclude reference="CCD-tx-O3c"/>
+                                <exclude reference="VU0-vK-o2r"/>
+                                <exclude reference="bVh-IE-GAI"/>
+                                <exclude reference="yeT-J4-VE6"/>
+                                <exclude reference="80J-Ir-e0H"/>
+                                <exclude reference="ueZ-Mg-70p"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bba-P8-QfK"/>
+                                <include reference="6QJ-vn-46K"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2eN-7A-C3r"/>
+                                <include reference="4BP-T1-vnK"/>
+                                <include reference="CCD-tx-O3c"/>
+                                <include reference="VU0-vK-o2r"/>
+                                <include reference="bVh-IE-GAI"/>
+                                <exclude reference="yeT-J4-VE6"/>
+                                <include reference="80J-Ir-e0H"/>
+                                <include reference="ueZ-Mg-70p"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="catFactButton" destination="6QJ-vn-46K" id="eBA-91-Et5"/>
+                        <outlet property="catFactLabel" destination="bba-P8-QfK" id="HNH-Ty-QQR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244.5" y="337.5"/>
         </scene>
     </scenes>
 </document>

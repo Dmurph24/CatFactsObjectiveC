@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *catFactButton;
+@property (weak, nonatomic) IBOutlet UILabel *catFactLabel;
+
+- (IBAction)pressedCatFactButton:(id)sender;
 
 @end
 
